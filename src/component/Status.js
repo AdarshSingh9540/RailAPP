@@ -5,7 +5,7 @@ const Status = () => {
     const [result, setResult] = useState(null); // State to hold the fetched data
     const [colorIndex, setColorIndex] = useState(0); // Index to track current color
     const colors = ['text-blue-800', 'text-red-800', 'text-green-800']; // Array of colors
-    const intervalTime = 7000;
+    const intervalTime = 8000;
 
     const fetchData = async () => {
         const url = 'https://trains.p.rapidapi.com/';
@@ -51,15 +51,19 @@ const Status = () => {
     }, []);
     return (
         <>  <div className="">
-        <div className={`font-sans font-extrabold text-4xl absolute top-1/2 left-[6%] ${colors[colorIndex]}`}>
+        <div className={`font-sans font-extrabold text-6xl absolute top-[40%] left-[6%] ${colors[colorIndex]}`}>
             <Typewriter
                 onInit={(typewriter) => {
                     typewriter
-                        .typeString('Indian Railway')
-                        .pauseFor(1000)
-                        .deleteAll()
-                        .typeString('Welcomes You !')
-                        .start();
+            .typeString('<div style="margin-bottom: 10px;">Indian Railway</div>')
+            .pauseFor(1000)
+            .typeString('<div style="margin-top: 10px;">Welcomes You !</div>') // Added margin-top here
+            .pauseFor(1000)
+            .deleteAll()
+            .typeString('<div style="margin-bottom: 10px;">भारतीय रेलवे</div>')
+            .pauseFor(1000)
+            .typeString('<div style="margin-top: 10px;">आपका स्वागत करता है !</div>')
+            .start();
                 }}
                 options={{
                     autoStart: true,
