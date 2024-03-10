@@ -4,7 +4,7 @@ const Status = () => {
     const [searchQuery, setSearchQuery] = useState('');
     const [result, setResult] = useState(null); // State to hold the fetched data
     const [colorIndex, setColorIndex] = useState(0); // Index to track current color
-    const colors = ['text-blue-700', 'text-red-700', 'text-green-700']; // Array of colors
+    const colors = ['text-blue-800', 'text-red-800', 'text-green-800']; // Array of colors
     const intervalTime = 7000;
 
     const fetchData = async () => {
@@ -51,7 +51,7 @@ const Status = () => {
     }, []);
     return (
         <>  <div className="">
-        <div className={`font-sans font-extrabold text-5xl absolute top-1/2 left-[5%] ${colors[colorIndex]}`}>
+        <div className={`font-sans font-extrabold text-4xl absolute top-1/2 left-[6%] ${colors[colorIndex]}`}>
             <Typewriter
                 onInit={(typewriter) => {
                     typewriter
